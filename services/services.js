@@ -1,10 +1,10 @@
 const { categoryDb, getCategory } = require('../db/db');
 
-const categoryService = async () => {
+const categoryService = async (name, desc) => {
     try {
-        return await categoryDb(user, content)
+        return await categoryDb(name, desc)
     } catch (error) {
-        throw new Error(e.message)
+        throw new Error(error.message)
     }
 }
 

@@ -1,27 +1,24 @@
 const { categoryService, getCategoryService } = require('../services/services');
 
 
-// const postCategory = async (req, res, next) => {
-//     const { user, content} = req.body;
-//     try {
-//         await createCategory(user, content)
+const postCategory = async (req, res, next) => {
+    // const { user, content} = req.body;
+    var name, desc;
 
-//         res.sendStatus(201)
-//         next()
-//     } catch (e) {
-//         console.log(e.message)
-//         res.sendStatus(500) && next(error);
-//     }
-// }
+    name = 'asd';
+    desc = 'asdasd';
+    var category =  await categoryService(name, desc);
+    res.json(category);
 
-const getCategory1 = async (req, res, next) => {
-    // console.log(createCategory);
+}
+
+const getCategory = async (req, res, next) => {
      var a = await getCategoryService();
     res.json(a);
 }
 
 
 module.exports = {
-    // postCategory,
-    getCategory1
+    postCategory,
+    getCategory
 }

@@ -4,7 +4,7 @@ const category = require('../controllers/category');
 
 const router = express.Router();
 
-// router.post('/category', category.postCategory);
-router.get('/category/data', category.getCategory1);
+router.post('/category/store', category.postCategory);
+router.get('/category/data', category.getCategory);
 
 module.exports = router
