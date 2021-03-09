@@ -9,7 +9,7 @@ const categoryDb = (name, desc) => {
         name: name,
         description: desc
     }
-    var category = db.insert(data)
+    var category = db.insert(data).onConflict('name').merge();
     return category;
 }
 
@@ -18,7 +18,22 @@ const getCategory = () => {
     return category;
 }
 
+const updateCategory = (name, desc, id) => {
+    
+    var data = {
+        name: name, 
+        description: desc
+    }
+    
+    console.log(data, id);
+
+    var category = db.where({id: id}).update(data)
+
+    return category;
+}
+
 module.exports = {
     categoryDb,
-    getCategory
+    getCategory,
+    updateCategory
 }

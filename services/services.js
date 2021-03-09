@@ -1,4 +1,4 @@
-const { categoryDb, getCategory } = require('../db/db');
+const { categoryDb, getCategory, updateCategory } = require('../db/db');
 
 const categoryService = async (name, desc) => {
     try {
@@ -13,7 +13,13 @@ const getCategoryService = async() => {
     return a;
 }
 
+const updateCategoryService = async(name, description, id) => {
+    var category = await updateCategory(name, description, id)
+    return category;
+}
+
 module.exports = {
     categoryService,
-    getCategoryService
+    getCategoryService,
+    updateCategoryService
 }
