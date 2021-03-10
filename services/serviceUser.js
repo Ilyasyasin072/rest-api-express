@@ -1,6 +1,7 @@
 const {
     
     gerUserModel,
+    getUserId
 
 } = require('../db/dbUser')
 
@@ -13,8 +14,17 @@ const getUserService = async (req, res) => {
 
 }
 
+const getUserIdService = async (id) => {
+
+    var user_id = await getUserId(id)
+
+    return user_id
+
+}
+
 module.exports = {
     
     getUserService,
+    getUserIdService,
 
 }
