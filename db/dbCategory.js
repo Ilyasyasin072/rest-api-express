@@ -1,7 +1,7 @@
 
-const dbClient = require('./knex');
+// const dbClient = require('./knex');
 
-const db = dbClient('categories');
+// const db = dbClient('categories');
 
 const Category = require('../models/Category');
 

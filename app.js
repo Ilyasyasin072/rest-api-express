@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 app.use('/api', routes)
 
 app.listen(process.env.PORT, () => {
-    console.log(`Example App http://localhost:${port}`);
+    console.log(`Running http://localhost:${port}`);
 })
 
 module.exports = {
