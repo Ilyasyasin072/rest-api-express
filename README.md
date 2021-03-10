@@ -10,6 +10,7 @@
 - [express-group-routes](https://www.npmjs.com/package/express-group-routes)
 - [mysql](https://www.npmjs.com/package/mysql)
 - [objection](https://vincit.github.io/objection.js/guide/query-examples.html#delete-queries)
+- [objection-soft-delete](https://github.com/griffinpp/objection-soft-delete)
 
 
 
