@@ -1,6 +1,6 @@
 # REST API NODE JS WITH KNEXJS
 
-## REQUIEMENT LIBRARY
+## REQUIREMENT LIBRARY
 
 - [nodejs](https://nodejs.org/en/)
 - [knexjs](http://knexjs.org/)
