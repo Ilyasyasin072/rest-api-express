@@ -18,6 +18,7 @@ router.group('/v1', (router) => {
 
     router.group('/customer', (router) => {
         router.get('/data', customerController.index)
+        router.post('/store', customerController.store)
     })
 
 })
