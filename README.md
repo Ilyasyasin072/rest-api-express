@@ -1,8 +1,6 @@
 # REST API NODE JS WITH KNEXJS
 ### Layer Architecture
 
-<!-- ![alt text](https://github.com/Ilyasyasin072/rest-api-express/blob/main/Layers.png) -->
-
 <p align="center" width="100%">
     <img width="100%%" src="https://github.com/Ilyasyasin072/rest-api-express/blob/main/Layers.png"> 
 </p>
