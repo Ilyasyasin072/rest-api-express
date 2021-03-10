@@ -3,10 +3,15 @@ require('express-group-routes');
 
 const categoryController = require('../controllers/CategoryController');
 const customerController = require('../controllers/CustomerController');
+const userController = require('../controllers/UserController');
 
 const router = express.Router();
 
 router.group('/v1', (router) => {
+
+    router.group('/user', (router) => {
+        router.get('/data', userController.getUser);
+    })
     
     router.group('/category', (router) => {
         router.get('/data', categoryController.getCategory);
