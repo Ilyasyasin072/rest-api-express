@@ -1,4 +1,7 @@
 # REST API NODE JS WITH KNEXJS
+### Layes Architecture
+
+[Architecture](https://github.com/Ilyasyasin072/rest-api-express/blob/main/Layers.png)
 
 ## REQUIREMENT LIBRARY
 
