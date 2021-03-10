@@ -11,7 +11,10 @@ const categoryDb = (name, desc) => {
         name: name,
         description: desc
     }
-    var category = db.insert(data).onConflict('name').merge();
+    // var category = db.insert(data).onConflict('name').merge();
+    // return category;
+
+    var category = Category.query().insert(data);
     return category;
 }
 
@@ -23,29 +26,38 @@ const getCategory = () => {
 }
 
 const updateCategory = (name, desc, id) => {
+
+    var getId = parseInt(id);
     
     var data = {
+        
         name: name, 
+
         description: desc
     }
     
-    console.log(data, id);
+    // console.log(data, id);
 
-    var category = db.where({id: id}).update(data)
+    // var category = db.where({id: id}).update(data)
+
+    var category = Category.query().findById(getId).patch(data);
 
     return category;
 }
 
 const getCategoryId = id => {
 
-    var category_find_id = Category.query().findById(id);
-
+    let getId = parseInt(id);
+    
+    var category_find_id = Category.query().findById(getId);
+    
     return category_find_id;
 }
 
 const destroyCategoryId = id => {
     
     var category_destroy = db.where('id', id);
+
     return category_destroy;
 }
 
