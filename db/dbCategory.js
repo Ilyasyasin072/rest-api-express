@@ -23,8 +23,13 @@ const getCategory = async () => {
     return data = await Category.query().whereNotDeleted().then(category => {
         return category
      })
+}
 
-    return data;
+const getCategorySoft = async () => {
+
+    return data = await Category.query().whereDeleted().then(category => {
+        return category
+    })
 }
 
 const updateCategory = (name, desc, id) => {
@@ -68,5 +73,6 @@ module.exports = {
     getCategory,
     updateCategory,
     getCategoryId,
-    destroyCategoryId
+    destroyCategoryId,
+    getCategorySoft,
 }

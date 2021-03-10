@@ -19,7 +19,7 @@ class Category extends softDelete({ columnName: 'deleted '})(Model) {
             properties: {
               id: { type: 'integer' },
               // matches the columnName passed above
-            //   deleted: { type: 'boolean' },
+              deleted: { type: 'boolean' },
               // other columns
             },
         }

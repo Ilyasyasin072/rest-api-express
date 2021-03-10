@@ -4,7 +4,8 @@ const {
         getCategory, 
         updateCategory, 
         getCategoryId, 
-        destroyCategoryId
+        destroyCategoryId,
+        getCategorySoft
 
     } = require('../db/dbCategory');
 
@@ -26,6 +27,14 @@ const getCategoryService = async() => {
     var category_get = await getCategory();
 
     return category_get;
+}
+
+
+const softCategoryService = async() => {
+
+    var category_soft_delete = await getCategorySoft();
+
+    return category_soft_delete
 }
 
 const updateCategoryService = async(name, description, id) => {
@@ -54,5 +63,6 @@ module.exports = {
     getCategoryService,
     updateCategoryService,
     getCategoryById,
-    destroyCategoryService
+    destroyCategoryService,
+    softCategoryService,
 }

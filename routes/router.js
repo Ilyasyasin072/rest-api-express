@@ -22,6 +22,7 @@ router.group('/v1', (router) => {
         router.post('/store', categoryController.postCategory);
         router.put('/update/:id', categoryController.updateCategory);
         router.delete('/delete/:id', categoryController.destroyCategoryId);
+        router.get('/deleted/all', categoryController.softDeleteGet);
     })
 
     router.group('/customer', (router) => {

@@ -3,6 +3,7 @@ const { categoryService,
         updateCategoryService, 
         getCategoryById,
         destroyCategoryService,
+        softCategoryService,
      } = require('../services/servicesCategory');
 
 const Category = require('../models/Category');
@@ -33,6 +34,21 @@ const getCategory = async (req, res, next) => {
         res.json(error.message);
     }
 }
+
+
+const softDeleteGet = async (req, res, next) => {
+
+    try {
+        var category = await softCategoryService();
+
+        res.json(category);
+
+    } catch (error) {
+        
+        res.json(error.messages);
+    }
+}
+
 
 const updateCategory = async (req, res) => {
 
@@ -85,12 +101,12 @@ const get = async (req, res) => {
     })
 }
 
-
 module.exports = {
     postCategory,
     getCategory,
     updateCategory,
     getCategoryId,
     destroyCategoryId,
-    get
+    get,
+    softDeleteGet
 }
