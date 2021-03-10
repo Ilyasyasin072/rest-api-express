@@ -88,3 +88,8 @@
         ]
 
     ```
+
+
+## REFERENCES
+
+[Project Structure For an Express REST API](https://www.coreycleary.me/project-structure-for-an-express-rest-api-when-there-is-no-standard-way)
