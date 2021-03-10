@@ -16,7 +16,7 @@ class Fleet extends Model {
         const User = require('./User')
         return {
             user : {
-                relation: Model.HasOneRelation,
+                relation: Model.BelongsToOneRelation,
                 modelClass: User,
                 join: {
                     from: 'fleets.user_id',

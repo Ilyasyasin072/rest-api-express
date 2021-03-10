@@ -81,7 +81,39 @@
         ]
 
     ```
+### Fleets
 
+    ```
+    [
+        {
+            "id": 2,
+            "plat_number": "123123",
+            "type": "1",
+            "photo": "-",
+            "user_id": 5,
+            "created_at": null,
+            "updated_at": null,
+            "user": {
+                "id": 5,
+                "name": "ilyas",
+                "identity_id": "022154",
+                "gender": "1",
+                "address": "Bandung",
+                "photo": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_São_Paulo_Zoo.jpg",
+                "email": "aa@gmail.com",
+                "password": "$2y$10$tcnTdFV0UrjyMPsdLzRxqugtazpTTf6ebPA0S7aRfQ4pMnJ4.qkkW",
+                "phone_number": "12312",
+                "api_token": null,
+                "reset_token": "UTNbo4BCT61OCyGoYgDfqKrZY8gFch3rQeqb3XJ8",
+                "reset_password": null,
+                "role": "1",
+                "status": 1,
+                "created_at": "2021-02-16T07:34:59.000Z",
+                "updated_at": "2021-02-18T06:20:25.000Z"
+            }
+        }
+    ]
+    ```
 
 ## REFERENCES
 
