@@ -3,6 +3,10 @@
 
 ![alt text](https://github.com/Ilyasyasin072/rest-api-express/blob/main/Layers.png)
 
+**Align center:**
+<p align="center" width="100%">
+    <img width="33%" src="https://github.com/Ilyasyasin072/rest-api-express/blob/main/Layers.png"> 
+</p>
 ## REQUIREMENT LIBRARY
 
 - [nodejs](https://nodejs.org/en/)
