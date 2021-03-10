@@ -12,6 +12,10 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
+app.use(bodyParser.json({
+    limit: "8mb",
+}));
+
 app.get('/', (req, res) => {
     res.send('App is working')
 })

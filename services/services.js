@@ -1,4 +1,10 @@
-const { categoryDb, getCategory, updateCategory } = require('../db/db');
+const { 
+        categoryDb, 
+        getCategory, 
+        updateCategory, 
+        getCategoryId, 
+        destroyCategoryId 
+    } = require('../db/db');
 
 const categoryService = async (name, desc) => {
     try {
@@ -18,8 +24,20 @@ const updateCategoryService = async(name, description, id) => {
     return category;
 }
 
+const getCategoryById = async(id) => {
+    var category = await getCategoryId(id);
+    return category;
+}
+
+const destroyCategoryService = async(id) => {
+    var destroy_category = await destroyCategoryId(id);
+    return destroy_category;
+}
+
 module.exports = {
     categoryService,
     getCategoryService,
-    updateCategoryService
+    updateCategoryService,
+    getCategoryById,
+    destroyCategoryService
 }

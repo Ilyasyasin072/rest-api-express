@@ -3,6 +3,8 @@ const dbClient = require('./knex');
 
 const db = dbClient('categories');
 
+const Category = require('../models/Category');
+
 const categoryDb = (name, desc) => {
 
     var data = {
@@ -14,8 +16,10 @@ const categoryDb = (name, desc) => {
 }
 
 const getCategory = () => {
-    let category = db;
-    return category;
+    
+    return Category.query().then(category => {
+       return category
+    })
 }
 
 const updateCategory = (name, desc, id) => {
@@ -32,8 +36,23 @@ const updateCategory = (name, desc, id) => {
     return category;
 }
 
+const getCategoryId = id => {
+
+    var category_find_id = Category.query().findById(id);
+
+    return category_find_id;
+}
+
+const destroyCategoryId = id => {
+    
+    var category_destroy = db.where('id', id);
+    return category_destroy;
+}
+
 module.exports = {
     categoryDb,
     getCategory,
-    updateCategory
+    updateCategory,
+    getCategoryId,
+    destroyCategoryId
 }
