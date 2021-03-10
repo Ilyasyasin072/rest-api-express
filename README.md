@@ -89,7 +89,7 @@
             - Content-Type: application/json
     - Body: -
 
-- with Eager loading
+- [with Eager loading](https://vincit.github.io/objection.js/guide/query-examples.html#eager-loading)
 - Result
     ```
         [
