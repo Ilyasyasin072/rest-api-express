@@ -18,6 +18,8 @@
     "express-group-routes": "^1.1.0",
     "knex": "^0.95.1",
     "mysql": "^2.18.1",
-    "objection": "^2.2.14"
+    "objection": "^2.2.14",
+    "objection-soft-delete": "^1.0.7",
+    "objection-unique": "^1.2.1"
   }
 }

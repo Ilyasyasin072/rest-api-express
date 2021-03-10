@@ -18,11 +18,13 @@ const categoryDb = (name, desc) => {
     return category;
 }
 
-const getCategory = () => {
-    
-    return Category.query().then(category => {
-       return category
-    })
+const getCategory = async () => {
+
+    return data = await Category.query().whereNotDeleted().then(category => {
+        return category
+     })
+
+    return data;
 }
 
 const updateCategory = (name, desc, id) => {
@@ -54,9 +56,9 @@ const getCategoryId = id => {
     return category_find_id;
 }
 
-const destroyCategoryId = id => {
+const destroyCategoryId = async (id) => {
     
-    var category_destroy = db.where('id', id);
+    var category_destroy = await Category.query().deleteById(id);
 
     return category_destroy;
 }

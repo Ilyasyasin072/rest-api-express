@@ -24,7 +24,7 @@ const getCategory = async (req, res, next) => {
     
     try {
 
-        var category = await getCategoryService();
+        var category = await getCategoryService()
         
         res.json(category);
     
@@ -66,7 +66,7 @@ const getCategoryId = async (req, res, next) => {
 const destroyCategoryId = async (req, res) => {
 
     const id = req.params.id;
-    console.log(id);
+    // console.log(id);
 
     try {
         const category_destroy = await destroyCategoryService(id)
