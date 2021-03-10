@@ -82,8 +82,15 @@
 
     ```
 ### Fleets
-- with Eager loading
+- Request
+    - Method : GET
+        - Endpoint : /api/v1/fleet/show/{id}
+        - Header:
+            - Content-Type: application/json
+    - Body: -
 
+- with Eager loading
+- Result
     ```
         [
             {
@@ -96,7 +103,7 @@
                 "updated_at": null,
                 "user": {
                     "id": 5,
-                    "name": "ilyas",
+                    "name": "",
                     "identity_id": "022154",
                     "gender": "1",
                     "address": "Bandung",
