@@ -1,6 +1,6 @@
 # REST API NODE JS WITH KNEXJS
 
-## Requirment
+## REQUIEMENT LIBRARY
 
 - ``nodejs``
 
@@ -20,7 +20,7 @@
 
 
 
-# Result 
+# RESULT 
 
 ### Customer 
 
