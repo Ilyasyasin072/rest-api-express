@@ -3,19 +3,12 @@
 ## REQUIEMENT LIBRARY
 
 - [nodejs](https://nodejs.org/en/)
-
 - [knexjs](http://knexjs.org/)
-
 - [body-parser](https://www.npmjs.com/package/body-parser)
-
 - [dotenv](https://www.npmjs.com/package/dotenv)
-
 - [express](https://expressjs.com/)
-
 - [express-group-routes](https://www.npmjs.com/package/express-group-routes)
-
 - [mysql](https://www.npmjs.com/package/mysql)
-
 - [objection](https://vincit.github.io/objection.js/guide/query-examples.html#delete-queries)
 
 
