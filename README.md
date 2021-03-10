@@ -16,7 +16,7 @@
 
 - ``mysql``
 
-- ``[objection]``(https://vincit.github.io/objection.js/guide/query-examples.html#delete-queries)
+- [objection](https://vincit.github.io/objection.js/guide/query-examples.html#delete-queries)
 
 
 
