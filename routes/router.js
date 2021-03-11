@@ -11,14 +11,232 @@ const router = express.Router();
 
 router.group('/v1', (router) => {
 
+    // Tamu
     router.group('/user', (router) => {
         router.get('/data', userController.getUser);
         router.post('/store', userController.store);
         
     })
 
+    // Revarasi
     router.group('/reservasi', (router) => {
         router.get('/data', reservasiController.index);
+    })
+
+    // Pembayaran
+
+    router.group('/pembayaran', (router) => {
+        router.get('/data', async(req, res) => {
+            res.json({
+                message: 'GET',
+                data : 'Pembayaran Data',
+                code: 200
+            })
+        })
+
+        router.get('/store', async(req, res) => {
+            res.json({
+                message: 'POST',
+                data : 'Pembayaran Data',
+                code: 200
+            })
+        })
+
+        router.get('/update/:id', async(req, res) => {
+            res.json({
+                message: 'PUT',
+                data : 'Pembayaran with params ' + req.params.id,
+                code: 200
+            })
+        })
+
+        router.get('/delete/:id', async(req, res) => {
+            res.json({
+                message: 'DELETE',
+                data : 'Pembayaran With params' + req.params.id,
+                code: 200
+            })
+        })
+    })
+
+    // Checkin
+
+    router.group('/check', (router) => {
+        router.get('/data', async(req, res) => {
+            res.json({
+                message: 'GET',
+                data : 'Pembayaran Data',
+                code: 200
+            })
+        })
+
+        router.get('/store', async(req, res) => {
+            res.json({
+                message: 'POST',
+                data : 'Pembayaran Data',
+                code: 200
+            })
+        })
+
+        router.get('/update/:id', async(req, res) => {
+            res.json({
+                message: 'PUT',
+                data : 'Pembayaran with params ' + req.params.id,
+                code: 200
+            })
+        })
+
+        router.get('/delete/:id', async(req, res) => {
+            res.json({
+                message: 'DELETE',
+                data : 'Pembayaran With params' + req.params.id,
+                code: 200
+            })
+        })
+    })
+
+    // Kota
+
+    router.group('/kota', (router) => {
+        router.get('/data', async(req, res) => {
+            res.json({
+                message: 'GET',
+                data : 'Pembayaran Data',
+                code: 200
+            })
+        })
+
+        router.get('/store', async(req, res) => {
+            res.json({
+                message: 'POST',
+                data : 'Pembayaran Data',
+                code: 200
+            })
+        })
+
+        router.get('/update/:id', async(req, res) => {
+            res.json({
+                message: 'PUT',
+                data : 'Pembayaran with params ' + req.params.id,
+                code: 200
+            })
+        })
+
+        router.get('/delete/:id', async(req, res) => {
+            res.json({
+                message: 'DELETE',
+                data : 'Pembayaran With params' + req.params.id,
+                code: 200
+            })
+        })
+    })
+
+    // Provinsi
+
+    router.group('/provinsi', (router) => {
+        router.get('/data', async(req, res) => {
+            res.json({
+                message: 'GET',
+                data : 'Pembayaran Data',
+                code: 200
+            })
+        })
+
+        router.get('/store', async(req, res) => {
+            res.json({
+                message: 'POST',
+                data : 'Pembayaran Data',
+                code: 200
+            })
+        })
+
+        router.get('/update/:id', async(req, res) => {
+            res.json({
+                message: 'PUT',
+                data : 'Pembayaran with params ' + req.params.id,
+                code: 200
+            })
+        })
+
+        router.get('/delete/:id', async(req, res) => {
+            res.json({
+                message: 'DELETE',
+                data : 'Pembayaran With params' + req.params.id,
+                code: 200
+            })
+        })
+    })
+
+    // Pegawai
+
+    router.group('/pegawai', (router) => {
+        router.get('/data', async(req, res) => {
+            res.json({
+                message: 'GET',
+                data : 'Pembayaran Data',
+                code: 200
+            })
+        })
+
+        router.get('/store', async(req, res) => {
+            res.json({
+                message: 'POST',
+                data : 'Pembayaran Data',
+                code: 200
+            })
+        })
+
+        router.get('/update/:id', async(req, res) => {
+            res.json({
+                message: 'PUT',
+                data : 'Pembayaran with params ' + req.params.id,
+                code: 200
+            })
+        })
+
+        router.get('/delete/:id', async(req, res) => {
+            res.json({
+                message: 'DELETE',
+                data : 'Pembayaran With params' + req.params.id,
+                code: 200
+            })
+        })
+    })
+
+    // Kamar
+
+    router.group('/kamar', (router) => {
+        router.get('/data', async(req, res) => {
+            res.json({
+                message: 'GET',
+                data : 'Pembayaran Data',
+                code: 200
+            })
+        })
+
+        router.get('/store', async(req, res) => {
+            res.json({
+                message: 'POST',
+                data : 'Pembayaran Data',
+                code: 200
+            })
+        })
+
+        router.get('/update/:id', async(req, res) => {
+            res.json({
+                message: 'PUT',
+                data : 'Pembayaran with params ' + req.params.id,
+                code: 200
+            })
+        })
+
+        router.get('/delete/:id', async(req, res) => {
+            res.json({
+                message: 'DELETE',
+                data : 'Pembayaran With params' + req.params.id,
+                code: 200
+            })
+        })
     })
     
     router.group('/category', (router) => {
