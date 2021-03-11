@@ -15,6 +15,7 @@ router.group('/v1', (router) => {
     router.group('/user', (router) => {
         router.get('/data', userController.getUser);
         router.post('/store', userController.store);
+        router.put('/update/:id', userController.update);
         
     })
 

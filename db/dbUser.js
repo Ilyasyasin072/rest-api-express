@@ -52,7 +52,7 @@ const updateUserModel = (nama_depan,
     no_tlp,
     phone,
     id_provinsi,
-    id_kota) => {
+    id_kota, id,) => {
 
     var data = {
         nama_depan: nama_depan,

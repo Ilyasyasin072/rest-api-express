@@ -2,6 +2,9 @@ const {
 
     gerUserModel,
     postUserModel,
+    updateUserModel,
+    showUserModel,
+    deleteUserModel
 
 } = require('../db/dbUser')
 
@@ -29,21 +32,6 @@ const postUserService = async (
     id_kota
 ) => {
 
-    var data = {
-        nama_depan: nama_depan,
-        nama_belakang: nama_belakang,
-        jenis_kelamin: jenis_kelamin,
-        tanggal_lahir: tanggal_lahir,
-        email: email,
-        password: password,
-        aktifasi: aktifasi,
-        alamat: alamat,
-        no_tlp: no_tlp,
-        phone: phone,
-        id_provinsi: id_provinsi,
-        id_kota: id_kota,
-    }
-
     var user_post = await postUserModel(nama_depan,
         nama_belakang,
         jenis_kelamin,
@@ -59,8 +47,39 @@ const postUserService = async (
     return user_post;
 }
 
+
+const updateUserService = async (
+    nama_depan,
+    nama_belakang,
+    jenis_kelamin,
+    tanggal_lahir,
+    email,
+    password,
+    aktifasi,
+    alamat,
+    no_tlp,
+    phone,
+    id_provinsi,
+    id_kota, id,
+) => {
+
+    var user_update = await updateUserModel(nama_depan,
+        nama_belakang,
+        jenis_kelamin,
+        tanggal_lahir,
+        email,
+        password,
+        aktifasi,
+        alamat,
+        no_tlp,
+        phone,
+        id_provinsi,
+        id_kota, id);
+    return user_update;
+}
 module.exports = {
 
     getUserService,
     postUserService,
+    updateUserService,
 }

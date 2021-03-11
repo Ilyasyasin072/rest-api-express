@@ -1,7 +1,8 @@
 const {
 
     getUserService,
-    postUserService
+    postUserService,
+    updateUserService,
 
 } = require('../services/serviceUser')
 
@@ -30,20 +31,33 @@ const store = async (req, res) => {
         id_kota
     } = req.body;
 
-    //    console.log(nama_depan, 
-    //     nama_belakang, 
-    //     jenis_kelamin, 
-    //     tanggal_lahir, 
-    //     email, 
-    //     password, 
-    //     aktifasi, 
-    //     alamat,
-    //     no_tlp, 
-    //     phone,
-    //     id_provinsi,
-    //     id_kota);
+    try {
+        
+        var users = await postUserService(
+            nama_depan,
+            nama_belakang,
+            jenis_kelamin,
+            tanggal_lahir,
+            email,
+            password,
+            aktifasi,
+            alamat,
+            no_tlp,
+            phone,
+            id_provinsi,
+            id_kota);
+    
+        res.json(users);
 
-    var users = await postUserService(
+    } catch (error) {
+        
+        res.json(error.message);
+    }
+}
+
+const update = async (req, res) => {
+
+    const {
         nama_depan,
         nama_belakang,
         jenis_kelamin,
@@ -55,14 +69,31 @@ const store = async (req, res) => {
         no_tlp,
         phone,
         id_provinsi,
-        id_kota);
+        id_kota
+    } = req.body;
+
+    var users = await updateUserService(
+        nama_depan,
+        nama_belakang,
+        jenis_kelamin,
+        tanggal_lahir,
+        email,
+        password,
+        aktifasi,
+        alamat,
+        no_tlp,
+        phone,
+        id_provinsi,
+        id_kota, req.params.id);
 
     res.json(users);
 }
+
+
 
 module.exports = {
 
     getUser,
     store,
-
+    update,
 }
