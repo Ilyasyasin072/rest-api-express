@@ -12,7 +12,7 @@ router.group('/v1', (router) => {
 
     router.group('/user', (router) => {
         router.get('/data', userController.getUser);
-        router.get('/show/:id', userController.getUserId);
+        router.post('/store', userController.store);
         
     })
     

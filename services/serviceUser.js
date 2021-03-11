@@ -1,7 +1,7 @@
 const {
-    
+
     gerUserModel,
-    getUserId
+    postUserModel,
 
 } = require('../db/dbUser')
 
@@ -14,17 +14,53 @@ const getUserService = async (req, res) => {
 
 }
 
-const getUserIdService = async (id) => {
+const postUserService = async (
+    nama_depan,
+    nama_belakang,
+    jenis_kelamin,
+    tanggal_lahir,
+    email,
+    password,
+    aktifasi,
+    alamat,
+    no_tlp,
+    phone,
+    id_provinsi,
+    id_kota
+) => {
 
-    var user_id = await getUserId(id)
+    var data = {
+        nama_depan: nama_depan,
+        nama_belakang: nama_belakang,
+        jenis_kelamin: jenis_kelamin,
+        tanggal_lahir: tanggal_lahir,
+        email: email,
+        password: password,
+        aktifasi: aktifasi,
+        alamat: alamat,
+        no_tlp: no_tlp,
+        phone: phone,
+        id_provinsi: id_provinsi,
+        id_kota: id_kota,
+    }
 
-    return user_id
-
+    var user_post = await postUserModel(nama_depan,
+        nama_belakang,
+        jenis_kelamin,
+        tanggal_lahir,
+        email,
+        password,
+        aktifasi,
+        alamat,
+        no_tlp,
+        phone,
+        id_provinsi,
+        id_kota);
+    return user_post;
 }
 
 module.exports = {
-    
-    getUserService,
-    getUserIdService,
 
+    getUserService,
+    postUserService,
 }

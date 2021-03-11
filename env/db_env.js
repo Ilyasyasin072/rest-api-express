@@ -5,7 +5,7 @@ module.exports = {
             host: 'localhost',
             user: 'root',
             password: '',
-            database: 'logistik-db',
+            database: 'db-reservasi',
             charset: 'utf8'
         },
         pool: {
