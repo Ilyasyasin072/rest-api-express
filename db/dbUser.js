@@ -2,7 +2,12 @@ const User = require('../models/User')
 
 const gerUserModel = () => {
 
-    return User.query().then(user => {
+    return User.query().withGraphFetched({
+        
+        provinsi:true,
+        kota: true,
+        
+    }).then(user => {
         return user
     })
 }
