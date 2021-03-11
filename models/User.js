@@ -24,10 +24,15 @@ class User extends Model {
                 }
             },
             kota : {
-                relation: Model.BelongsToOneRelation,
+                relation: Model.HasOneRelation,
                 modelClass: Kota,
                 join: {
                     from : 'users.id_kota',
+                    // through: {
+                    //     // persons_movies is the join table.
+                    //     from: 'kota.id_provinsi',
+                    //     to: 'provinsi.id'
+                    //   },
                     to : 'kota.id'
                 }
             }
