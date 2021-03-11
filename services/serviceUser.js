@@ -77,9 +77,25 @@ const updateUserService = async (
         id_kota, id);
     return user_update;
 }
+
+const showUserService = async (id) => {
+    
+    var user_show = await showUserModel(id);
+
+    return user_show;
+}
+
+const deleteUserService = async (id) => {
+
+    var user_delete = await deleteUserModel(id);
+
+    return user_delete;
+}
 module.exports = {
 
     getUserService,
     postUserService,
     updateUserService,
+    showUserService,
+    deleteUserService
 }

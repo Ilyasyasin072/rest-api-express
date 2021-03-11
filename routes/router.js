@@ -16,6 +16,8 @@ router.group('/v1', (router) => {
         router.get('/data', userController.getUser);
         router.post('/store', userController.store);
         router.put('/update/:id', userController.update);
+        router.get('/show/:id', userController.show);
+        router.delete('/delete/:id', userController.destroy);
         
     })
 
