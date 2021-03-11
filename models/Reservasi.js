@@ -11,6 +11,33 @@ class Reservasi extends SoftDelete({ columnName: 'deleted' })(Model) {
         return 'reservasi'
     }
 
+    // RELATION MAPPING
+
+    static get relationMappings() {
+        
+        const User = require('./User');
+        const Kamar = require('./Kamar');
+        
+        return {
+            user: {
+                relation: Model.BelongsToOneRelation,
+                modelClass: User,
+                join: {
+                    from: 'reservasi.user_id',
+                    to: 'users.id'
+                }
+            },
+            kamar: {
+                relation: Model.BelongsToOneRelation,
+                modelClass: Kamar,
+                join: {
+                    from: 'reservasi.id_kamar',
+                    to : 'kamar.id'
+                }
+            }
+        }
+    }
+
     static get jsonSchema() {
         return {
             type: 'object',
@@ -19,7 +46,6 @@ class Reservasi extends SoftDelete({ columnName: 'deleted' })(Model) {
             properties: {
                 id: { type: 'integer' },
                 deleted: { type: 'boolean' },
-                tanggal_lahir: { type : 'date'}
             }
         }
     }

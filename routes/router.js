@@ -5,6 +5,7 @@ const categoryController = require('../controllers/CategoryController');
 const customerController = require('../controllers/CustomerController');
 const userController = require('../controllers/UserController');
 const fletController = require('../controllers/FleetController');
+const reservasiController = require('../controllers/ReservasiController');
 
 const router = express.Router();
 
@@ -14,6 +15,10 @@ router.group('/v1', (router) => {
         router.get('/data', userController.getUser);
         router.post('/store', userController.store);
         
+    })
+
+    router.group('/reservasi', (router) => {
+        router.get('/data', reservasiController.index);
     })
     
     router.group('/category', (router) => {
